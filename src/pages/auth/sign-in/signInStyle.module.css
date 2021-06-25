@@ -1,0 +1,54 @@
+/*auth form*/
+
+.authform {
+  display: flex;
+  flex-direction: column;
+  font-family: bpg;
+  font-size: 13px;
+  width: 50%;
+  margin: 50px auto;
+  padding-top: 100px;
+}
+
+.authform label {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.authform input {
+  outline: none;
+  border: none;
+  padding: 25px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.authform textarea {
+  outline: none;
+  border: none;
+  padding: 25px;
+  width: 100%;
+  resize: vertical;
+  min-height: 150px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+
+.authform button {
+  padding: 20px;
+  background: #4e6fd3;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.authform input:focus {
+  background: #e8e9ea;
+}
+
+.authform button:focus {
+  opacity: 0.8;
+}

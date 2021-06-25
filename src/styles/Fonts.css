@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'bpg';
+  src: url('../ui/fonts/bpg-arial-caps-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'bpgcaps';
+  src: url('../ui/fonts/bpgcaps.ttf');
+}
+
+@font-face {
+  font-family: 'bpgweb';
+  src: url('../ui/fonts/bpg-web-002-webfont.ttf');
+}
+
+@font-face {
+  font-family: 'bpgle';
+  src: url('../ui/fonts/bpg-le-studio-02-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'mont-semibold';
+  src: url('../ui/fonts/mont-semibold.ttf');
+}
+
+@font-face {
+  font-family: 'mont-bold';
+  src: url('../ui/fonts/mont-bold.ttf');
+}
