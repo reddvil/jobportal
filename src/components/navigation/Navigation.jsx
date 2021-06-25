@@ -12,31 +12,28 @@ const Navigation = () => {
             </NavLink>
           </div>
           <div className="navi">
-            <NavLink to="" className="nav_link">
+            <NavLink to="/" className="nav_link">
               ვაკანსიები
             </NavLink>
-            <NavLink to="" className="nav_link">
+            <NavLink to="/" className="nav_link">
               კომპანიები
             </NavLink>
-            <NavLink to="" className="nav_link">
+            <NavLink to="/" className="nav_link">
               რეკლამა
             </NavLink>
-            <NavLink to="" className="nav_link">
+            <NavLink to="/" className="nav_link">
               კონტაქტი
             </NavLink>
           </div>
           {/* <div className="profile"><div className="avatar"><img src="img/avatar.png" alt="" className="avatar_img"></div><NavLink to="" className="avtar_title">John Doe</NavLink><i className="fas fa-caret-down"></i></div> */}
 
           <div className="auth">
-            <NavLink to="login.html">
-              <NavLink to="/signin" className="auth_btn">
-                Login
-              </NavLink>
+            <NavLink to="/signin" className="auth_btn">
+              Login
             </NavLink>
-            <NavLink to="register.html">
-              <NavLink to="/signup" className="reg_btn">
-                Register
-              </NavLink>
+
+            <NavLink to="/signup" className="reg_btn">
+              Register
             </NavLink>
           </div>
 

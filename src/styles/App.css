@@ -69,7 +69,7 @@ button:active {
   color: #000;
   background: transparent;
   border: 0.5px solid #e8edef;
-  padding: 12px 40px;
+  padding: 14px 40px;
   cursor: pointer;
   border-radius: 7px;
 }
@@ -79,7 +79,7 @@ button:active {
   font-family: mont-semibold;
   color: #fff;
   background: #4e6fd3;
-  padding: 12px 30px;
+  padding: 14px 25px;
   cursor: pointer;
   border-radius: 7px;
   margin-left: 7px;
@@ -96,7 +96,13 @@ button:active {
   font-family: bpg;
   color: rgb(5, 0, 31);
   text-indent: 27px;
-  /* font-weight:bold; */
+  transition: 0.3s;
+  display: block;
+  /* font-weight: bold; */
+}
+
+.navi a:hover {
+  color: rgb(51, 82, 185);
 }
 
 .progress-container {

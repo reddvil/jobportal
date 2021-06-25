@@ -18,9 +18,9 @@ const HomePage = () => {
               placeholder="იპოვეთ თქვენი საოცნებო სამუშაო."
             />
             <i className="fas fa-search"></i>
-            <label for="Category">Category:</label>
+            <label htmlFor="Category">Category:</label>
             <select id="search-location">
-              <option className="opt" value="all" selected>
+              <option className="opt" value="all">
                 All
               </option>
               <option className="opt" value="1">
@@ -39,9 +39,9 @@ const HomePage = () => {
                 Adjara
               </option>
             </select>
-            <label for="location">Location:</label>
+            <label htmlFor="location">Location:</label>
             <select id="search-location">
-              <option className="opt" value="all" selected>
+              <option className="opt" value="all">
                 All
               </option>
               <option className="opt" value="1">
@@ -140,7 +140,7 @@ const HomePage = () => {
             </div>
           </div>
 
-          <h1 className="main_title" font-size="17px">
+          <h1 className="main_title" style={{ fontSize: '17px' }}>
             Location
           </h1>
 
@@ -155,7 +155,7 @@ const HomePage = () => {
             <div className="location">Mcxeta</div>
           </div>
 
-          <h1 className="main_title" font-size="15px">
+          <h1 className="main_title" style={{ fontSize: 15 }}>
             Jobs
           </h1>
 
