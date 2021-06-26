@@ -15,11 +15,8 @@ const Navigation = () => {
             <NavLink to="/" className="nav_link">
               ვაკანსიები
             </NavLink>
-            <NavLink to="/" className="nav_link">
-              კომპანიები
-            </NavLink>
-            <NavLink to="/" className="nav_link">
-              რეკლამა
+            <NavLink to="/aboutus" className="nav_link">
+              ჩვენს შესახებ
             </NavLink>
             <NavLink to="/" className="nav_link">
               კონტაქტი

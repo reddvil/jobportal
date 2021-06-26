@@ -4,6 +4,7 @@ import Navigation from './components/navigation';
 import Footer from './components/footer';
 import SignIn from './pages/auth/sign-in';
 import SignUp from './pages/auth/sign-up';
+import AboutUs from './pages/aboutUs';
 import './styles/Reset.css';
 import './styles/App.css';
 import './styles/Responsive.css';
@@ -16,6 +17,10 @@ function App() {
       <Switch>
         <Route exact path="/">
           <HomePage />
+        </Route>
+
+        <Route path='/aboutus'>
+            <AboutUs />
         </Route>
 
         <Route path="/signin">
