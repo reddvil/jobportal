@@ -1,11 +1,12 @@
-import React from 'react'
+import { withNoAuth } from "../../../hoc"
+import SignUpForm from "../../../components/forms/signUpForm/SignUpForm"
 
-const index = () => {
+const SignUpPage = () => {
     return (
         <div>
-            
+            <SignUpForm />
         </div>
     )
 }
 
-export default index
+export default withNoAuth(SignUpPage)
