@@ -1,9 +1,9 @@
-import style from './aboutStyle.module.css'
+import style from './aboutStyle.module.css';
 
 function AboutUs() {
   return (
-    <div style={style.div}>
-      <p>
+    <div className={style.container}>
+      <p className ={style.aboutus}>
         Jobs Portal არის ვებ-გვერდი, სადაც ქვეყნდება განცხადებები ვაკანსიების,
         ტრენინგების, გაცვლითი პროგრამების, გრანტებისა და ტენდერების შესახებ.
         JobPortal შეიქმნა 2021 წელს, როგორც დასაქმების ხელშემწყობი არამომგებიანი

@@ -1,8 +1,15 @@
-div {
-  margin-top: 100px;
-}
-
-p {
+.aboutus {
   font-size: 20px;
   font-family: bpg;
+  margin-top: 150px;
+  height: 50vh;
+  display: block;
+  color: rgb(19, 19, 19);
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
 }
