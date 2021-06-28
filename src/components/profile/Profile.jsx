@@ -20,8 +20,12 @@ const Profile = () => {
       <Link to="/profile" className="avtar_title">
         John Doe
       </Link>
-      <button onClick={handleLogOut}>LogOut</button>
+
       <i className="fas fa-caret-down"></i>
+
+      <button className="profile-btn" onClick={handleLogOut}>
+        Log Out
+      </button>
     </div>
   );
 };
