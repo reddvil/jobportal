@@ -1,20 +1,34 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
-import { login } from '../../../services';
 import { withNoAuth } from '../../../hoc';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { loginUser } from '../../../redux/actions/auth-actions';
 import styles from './signInStyle.module.css';
 
 function SignInForm(props) {
   const { register, handleSubmit } = useForm();
+  const dispatch = useDispatch();
+  const user = useSelector((store) => store.user.user);
   const history = useHistory();
 
-  const onSubmit = async (data) => {
-    const loggedIn = await login(data);
-
-    localStorage.setItem('auth.token', JSON.stringify(loggedIn.token));
-    history.replace('/');
+  const onSubmit = async (form) => {
+    dispatch(loginUser(form));
+    // console.log('in');
   };
+
+  useEffect(() => {
+    if (user) {
+      history.replace('/');
+    }
+    // console.log(user);
+  }, [history, user]);
+
+  useEffect(() => {
+    // console.log(history);
+  }, [history, history.location]);
 
   return (
     <div>

@@ -1,7 +1,11 @@
 import { NavLink } from 'react-router-dom';
+import {useSelector} from 'react-redux'
+import Profile from '../profile/Profile';
 import logo from '../../ui/images/logo.png';
 
 const Navigation = () => {
+  const user = useSelector((store) => store.user.user);
+
   return (
     <header className="header" id="navbar">
       <div className="container">
@@ -22,17 +26,20 @@ const Navigation = () => {
               კონტაქტი
             </NavLink>
           </div>
-          {/* <div className="profile"><div className="avatar"><img src="img/avatar.png" alt="" className="avatar_img"></div><NavLink to="" className="avtar_title">John Doe</NavLink><i className="fas fa-caret-down"></i></div> */}
 
-          <div className="auth">
-            <NavLink to="/signin" className="auth_btn">
-              Login
-            </NavLink>
+          {user ? (
+            <Profile />
+          ) : (
+            <div className="auth">
+              <NavLink to="/signin" className="auth_btn">
+                Login
+              </NavLink>
 
-            <NavLink to="/signup" className="reg_btn">
-              Register
-            </NavLink>
-          </div>
+              <NavLink to="/signup" className="reg_btn">
+                Register
+              </NavLink>
+            </div>
+          )}
 
           <div className="responsive-menu">
             <i className="far fa-bars"></i>
