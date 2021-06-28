@@ -5,10 +5,12 @@ import Footer from './components/footer';
 import SignIn from './pages/auth/sign-in';
 import SignUp from './pages/auth/sign-up';
 import AboutUs from './pages/aboutUs';
+import JobsProvider from './providers/JobsProvider';
 import './styles/Reset.css';
 import './styles/App.css';
 import './styles/Responsive.css';
 import './styles/Fonts.css';
+
 
 function App() {
   return (
@@ -16,11 +18,12 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/">
-          <HomePage />
+          <JobsProvider> <HomePage /></JobsProvider>
+           
         </Route>
 
-        <Route path='/aboutus'>
-            <AboutUs />
+        <Route path="/aboutus">
+          <AboutUs />
         </Route>
 
         <Route path="/signin">
