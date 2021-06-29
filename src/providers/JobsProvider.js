@@ -5,16 +5,27 @@ const JobsContext = createContext(null);
 const JobsProvider = ({ children }) => {
   const [jobs, setJobs] = useState([]);
 
+  const fetchJobs = async () => {
+    const jobs = await jobsApi.getJobs({ limit: 8 });
+    return jobs
+  };
+
   useEffect(() => {
-    const fetchJobs = async () => {
-      const jobs = await jobsApi.getJobs({ limit: 8 });
-      setJobs(jobs);
-    };
-    fetchJobs();
+    // const fetchJobs = async () => {
+    //   const jobs = await jobsApi.getJobs({ limit: 8 });
+    //   setJobs(jobs);
+    // };
+    (async () => {const fJobs = await fetchJobs()
+    
+    setJobs(fJobs)
+    })()
+    // console.log(fetchJobs())
+    
+    // setJobs(fetchJobs());
   }, []);
 
   return (
-    <JobsContext.Provider value={{ jobs, setJobs }}>
+    <JobsContext.Provider value={{ jobs, setJobs,fetchJobs}}>
       {children}
     </JobsContext.Provider>
   );

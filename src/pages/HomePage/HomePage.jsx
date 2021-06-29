@@ -82,7 +82,6 @@ const HomePage = () => {
 
         <JobList />
 
-        <button className="show_more">მეტის ნახვა</button>
       </div>
     </div>
   );
