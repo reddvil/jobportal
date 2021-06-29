@@ -16,6 +16,7 @@ export const authReducer = (state = initialState, action) => {
     case types.LOGIN_REQUEST_SUCCESS:
       return {
         user: action.payload,
+        
       };
 
     case types.LOGIN_REQUEST_FAIL:

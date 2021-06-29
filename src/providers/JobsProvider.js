@@ -11,17 +11,11 @@ const JobsProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    // const fetchJobs = async () => {
-    //   const jobs = await jobsApi.getJobs({ limit: 8 });
-    //   setJobs(jobs);
-    // };
     (async () => {const fJobs = await fetchJobs()
     
     setJobs(fJobs)
     })()
-    // console.log(fetchJobs())
-    
-    // setJobs(fetchJobs());
+
   }, []);
 
   return (
