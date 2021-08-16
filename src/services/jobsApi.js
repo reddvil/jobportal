@@ -1,7 +1,7 @@
-export const getJobs = async ({ limit = 0 }) => {
+export const getJobs = async ({ limit = 8, page = 1 }) => {
   try {
     const response = await fetch(
-      `${process.env.REACT_APP_API_URL}?page=1&limit=${limit}`,
+      `${process.env.REACT_APP_API_URL}?page=${page}&limit=${limit}`,
       {
         method: 'GET',
         headers: {
