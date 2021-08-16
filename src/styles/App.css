@@ -93,17 +93,18 @@ button:active {
 }
 
 .navi a {
-  font-size: 14px;
-  font-family: bpg;
-  color: rgb(5, 0, 31);
-  text-indent: 27px;
-  transition: 0.3s;
+  font-size: 13px;
+  font-family: pantonreg;
+  letter-spacing: 1px;
+  color: rgb(63, 63, 63);
+  text-indent: 35px;
+  transition: 0.1s ease-in;
   display: block;
-  /* font-weight: bold; */
 }
 
 .navi a:hover {
-  color: rgb(51, 82, 185);
+  color: rgb(135, 145, 202);
+  font-weight: 600;
 }
 
 .progress-container {
@@ -119,15 +120,18 @@ button:active {
 }
 
 .avatar {
-  height: 42px;
-  width: 42px;
-  border: 3px solid #eeeeee;
-  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border: 4px solid #f8f8f8;
+  border-radius: 40%;
 }
 
 .avatar img {
-  height: 100%;
-  border-radius: 50%;
+  object-fit: contain;
 }
 
 .profile {
@@ -139,9 +143,15 @@ button:active {
   font-family: bpg;
   text-align: center;
   font-size: 15px;
-  margin-left: 5px;
+  margin-left: 7px;
   font-weight: 500;
+  letter-spacing: 1.3px;
   color: rgb(34, 34, 34);
+  transition: 0.2s all ease;
+}
+
+.profile a:hover {
+  font-weight: 800;
 }
 
 .profile i {
@@ -174,6 +184,11 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  transition: 0.2s transform ease-in-out;
+}
+
+.category:hover {
+  transform: translateY(-10px);
 }
 
 .title_gap .title {
@@ -235,10 +250,16 @@ button:active {
   padding-right: 30px;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
   align-items: center;
   text-align: center;
   border: 1px solid #c3c2f8;
   margin-right: 5px;
+}
+
+.location:hover {
+  background: rgba(43, 29, 232, 0.2);
+  color: rgba(255, 255, 255, 1);
 }
 
 .location:last-child {
@@ -302,7 +323,7 @@ button:active {
   font-size: 16px;
   font-family: 'mont-bold';
   padding-bottom: 3px;
-  color: rgb(15, 2, 80, 1);
+  color: rgb(15, 2, 80);
 }
 
 .vacansy-title h2 {
@@ -364,7 +385,7 @@ button:active {
   margin-top: 20px;
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 85px;
   background: #fff;
   box-shadow: 5px 5px 60px 10px rgb(240 243 251 / 80%);
   border-radius: 2px;
@@ -379,7 +400,7 @@ button:active {
   width: 40%;
   outline: none;
   text-indent: 45px;
-  font-size: 11px;
+  font-size: 13px;
   font-family: bpgle;
 
   border: none;
@@ -651,12 +672,17 @@ button:active {
 
 .profile-btn {
   border-radius: 7px;
-  background: rgb(135, 151, 243);
+  background: rgba(135, 151, 243, 0.9);
   color: #fff;
   font-weight: 500;
-  margin-left: 10px;
-  height: 30px;
+  margin-left: 20px;
+  height: 35px;
   width: 70px;
+  font-family: pantonbold;
+}
+
+.profile-btn:hover {
+  background: rgb(131, 147, 236);
 }
 
 .header-info {
@@ -759,4 +785,8 @@ button:active {
   font-family: mont-semibold;
   font-weight: 800;
   margin-bottom: 35px;
+}
+
+.loading {
+  font-size: 24px;
 }

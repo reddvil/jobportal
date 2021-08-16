@@ -14,6 +14,16 @@
 }
 
 @font-face {
+  font-family: 'pantonreg';
+  src: url('../ui/fonts/PantonMtav3reg.ttf');
+}
+
+@font-face {
+  font-family: 'pantonbold';
+  src: url('../ui/fonts/PantonMtav3Bold.ttf');
+}
+
+@font-face {
   font-family: 'bpgle';
   src: url('../ui/fonts/bpg-le-studio-02-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
 }
@@ -26,4 +36,71 @@
 @font-face {
   font-family: 'mont-bold';
   src: url('../ui/fonts/mont-bold.ttf');
+}
+
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-BoldOblique.woff2")
+      format("woff2"),
+    url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-BoldOblique.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-Oblique.woff2")
+      format("woff2"),
+    url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-Oblique.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-Light.woff2")
+      format("woff2"),
+    url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-Light.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica.woff2")
+      format("woff2"),
+    url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-Bold.woff2")
+      format("woff2"),
+    url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-Bold.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-LightOblique.woff2")
+      format("woff2"),
+    url("https://s3.eu-central-1.amazonaws.com/public.tt.ge/fonts/helvetica/Helvetica-LightOblique.woff")
+      format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }

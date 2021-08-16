@@ -1,6 +1,7 @@
 import { Link, useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { logOut } from '../../redux/actions/auth-actions';
+import avatar from '../../ui/svg/avatar.svg'
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -14,17 +15,15 @@ const Profile = () => {
   return (
     <div className="profile">
       <div className="avatar">
-        <img src="img/avatar.png" alt="" className="avatar_img" />
+        <img src={avatar} alt="" className="avatar_img" />
       </div>
 
       <Link to="/profile" className="avtar_title">
-        John Doe
+        Gela Kutuxovi
       </Link>
 
-      <i className="fas fa-caret-down"></i>
-
       <button className="profile-btn" onClick={handleLogOut}>
-        Log Out
+        Log out
       </button>
     </div>
   );

@@ -14,4 +14,3 @@ export const autoLoginMiddleware = (store) => (next) => (action) => {
   }
 };
 
-export default autoLoginMiddleware;
