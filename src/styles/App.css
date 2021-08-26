@@ -294,6 +294,12 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.job-item:hover {
+  transform: translateY(-2px);
 }
 
 .company {
