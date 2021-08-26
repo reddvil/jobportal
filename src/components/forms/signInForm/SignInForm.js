@@ -27,9 +27,6 @@ function SignInForm(props) {
     }
   }, [history, user]);
 
-  useEffect(() => {
-  }, [history, history.location]);
-
   return (
     <div>
       <form className={styles.authform} onSubmit={handleSubmit(onSubmit)}>
@@ -41,6 +38,7 @@ function SignInForm(props) {
           className="htmlForm-control"
           id="email"
           defaultValue="eve.holt@reqres.in"
+          placeholder="Enter your email"
           {...register('email', { required: true, email: true })}
         />
 
@@ -51,6 +49,7 @@ function SignInForm(props) {
           type="password"
           className="htmlForm-control"
           id="password"
+          placeholder="Enter your password"
           defaultValue="cityslicka"
           {...register('password', { required: true })}
         />
