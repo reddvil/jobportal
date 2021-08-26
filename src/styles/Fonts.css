@@ -14,6 +14,16 @@
 }
 
 @font-face {
+  font-family: 'pantonreg';
+  src: url('../ui/fonts/PantonMtav3reg.ttf');
+}
+
+@font-face {
+  font-family: 'pantonbold';
+  src: url('../ui/fonts/PantonMtav3Bold.ttf');
+}
+
+@font-face {
   font-family: 'bpgle';
   src: url('../ui/fonts/bpg-le-studio-02-webfont.ttf') format('truetype'); /* Safari, Android, iOS */
 }
@@ -26,4 +36,24 @@
 @font-face {
   font-family: 'mont-bold';
   src: url('../ui/fonts/mont-bold.ttf');
+}
+
+@font-face {
+  font-family: 'FiraGO-Light';
+  src: url('../ui/fonts/FiraGO-Light.ttf');
+}
+
+@font-face {
+  font-family: 'FiraGO-Medium';
+  src: url('../ui/fonts/FiraGO-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'FiraGO-Regular';
+  src: url('../ui/fonts/FiraGO-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'FiraGO-SemiBold';
+  src: url('../ui/fonts/FiraGO-SemiBold.ttf');
 }

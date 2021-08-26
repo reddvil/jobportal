@@ -4,22 +4,38 @@ import jobsApi from '../services/jobsApi';
 const JobsContext = createContext(null);
 const JobsProvider = ({ children }) => {
   const [jobs, setJobs] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const pageSize = 8;
 
   const fetchJobs = async () => {
-    const jobs = await jobsApi.getJobs({ limit: 8 });
-    return jobs
+    const jobs = await jobsApi.getJobs({ limit: pageSize, page: 1 });
+    return jobs;
+  };
+
+  const loadMore = async (page) => {
+    const jobs = await jobsApi.getJobs({ limit: pageSize, page: page });
+    return jobs;
   };
 
   useEffect(() => {
-    (async () => {const fJobs = await fetchJobs()
-    
-    setJobs(fJobs)
-    })()
-
+    (async () => {
+      setIsLoading(true);
+      const fJobs = await fetchJobs();
+      setJobs(fJobs);
+      setIsLoading(false);
+    })();
   }, []);
 
   return (
-    <JobsContext.Provider value={{ jobs, setJobs,fetchJobs}}>
+    <JobsContext.Provider
+      value={{
+        jobs,
+        setJobs,
+        fetchJobs,
+        loadMore,
+        isLoading,
+        pageSize,
+      }}>
       {children}
     </JobsContext.Provider>
   );

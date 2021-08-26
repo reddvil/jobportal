@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(211, 211, 211);
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
 body {
   box-sizing: border-box;
   background: rgb(246, 248, 249);
@@ -13,6 +26,7 @@ body {
   transition: 0.3s;
   overflow-x: hidden;
   transition: 0.3s ease-in;
+  font-size: 62.5%;
 }
 
 button {
@@ -70,9 +84,14 @@ button:active {
   color: #000;
   background: transparent;
   border: 0.5px solid #e8edef;
-  padding: 14px 40px;
+  padding: 14px 25px;
   cursor: pointer;
   border-radius: 7px;
+  font-size: 14px;
+}
+
+.auth_btn:hover {
+  background: rgb(247, 247, 247);
 }
 
 .reg_btn {
@@ -84,6 +103,7 @@ button:active {
   cursor: pointer;
   border-radius: 7px;
   margin-left: 7px;
+  font-size: 14px;
 }
 
 .navi {
@@ -93,17 +113,16 @@ button:active {
 }
 
 .navi a {
-  font-size: 14px;
-  font-family: bpg;
-  color: rgb(5, 0, 31);
-  text-indent: 27px;
-  transition: 0.3s;
+  font-size: 13px;
+  font-family: FiraGO-Regular;
+  color: rgb(63, 63, 63);
+  text-indent: 35px;
+  transition: 0.1s ease-in;
   display: block;
-  /* font-weight: bold; */
 }
 
 .navi a:hover {
-  color: rgb(51, 82, 185);
+  color: rgb(135, 145, 202);
 }
 
 .progress-container {
@@ -119,15 +138,18 @@ button:active {
 }
 
 .avatar {
-  height: 42px;
-  width: 42px;
-  border: 3px solid #eeeeee;
-  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border: 4px solid #f8f8f8;
+  border-radius: 40%;
 }
 
 .avatar img {
-  height: 100%;
-  border-radius: 50%;
+  object-fit: contain;
 }
 
 .profile {
@@ -139,9 +161,15 @@ button:active {
   font-family: bpg;
   text-align: center;
   font-size: 15px;
-  margin-left: 5px;
+  margin-left: 7px;
   font-weight: 500;
+  letter-spacing: 1.3px;
   color: rgb(34, 34, 34);
+  transition: 0.2s all ease;
+}
+
+.profile a:hover {
+  font-weight: 800;
 }
 
 .profile i {
@@ -162,6 +190,7 @@ button:active {
   /*   flex-wrap:wrap;*/
   justify-content: space-between;
   padding-top: 15px;
+  flex-shrink: 0;
 }
 
 .category {
@@ -174,11 +203,16 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+  transition: 0.2s transform ease-in-out;
+}
+
+.category:hover {
+  transform: translateY(-10px);
 }
 
 .title_gap .title {
   font-family: 'mont-bold';
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   padding-bottom: 4px;
   color: rgb(15, 2, 80);
@@ -186,7 +220,7 @@ button:active {
 
 .title_gap .jobs_count {
   font-family: 'mont-semibold';
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(188, 188, 200);
 }
 
@@ -235,10 +269,16 @@ button:active {
   padding-right: 30px;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
   align-items: center;
   text-align: center;
   border: 1px solid #c3c2f8;
   margin-right: 5px;
+}
+
+.location:hover {
+  background: rgba(43, 29, 232, 0.2);
+  color: rgba(255, 255, 255, 1);
 }
 
 .location:last-child {
@@ -273,6 +313,12 @@ button:active {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.job-item:hover {
+  transform: translateY(-2px);
 }
 
 .company {
@@ -280,33 +326,35 @@ button:active {
   align-items: center;
 }
 .company-logo {
-  height: 38px;
-  width: 38px;
+  height: 45px;
+  width: 45px;
   margin-right: 10px;
   border-radius: 10px;
-  border: 2px solid rgba(95, 95, 95, 0.1);
+  border: 2px solid rgba(95, 95, 95, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .company-logo img {
   height: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   object-position: center;
-  /* width: 100%; */
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 }
 
 .vacansy-title h1 {
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'mont-bold';
-  padding-bottom: 3px;
-  color: rgb(15, 2, 80, 1);
+  margin-bottom: 4px;
+  line-height: 15px;
+  color: rgb(15, 2, 80);
 }
 
 .vacansy-title h2 {
-  font-size: 14px;
+  font-size: 13px;
   font-family: 'mont-semibold';
   color: rgb(15, 2, 80, 0.6);
 }
@@ -364,7 +412,7 @@ button:active {
   margin-top: 20px;
   position: relative;
   width: 100%;
-  height: 80px;
+  height: 85px;
   background: #fff;
   box-shadow: 5px 5px 60px 10px rgb(240 243 251 / 80%);
   border-radius: 2px;
@@ -379,7 +427,7 @@ button:active {
   width: 40%;
   outline: none;
   text-indent: 45px;
-  font-size: 11px;
+  font-size: 13px;
   font-family: bpgle;
 
   border: none;
@@ -476,6 +524,7 @@ button:active {
   width: 100%;
   height: 70px;
   margin-top: 25px;
+  font-family: bpg;
 }
 
 .inner-footer {
@@ -487,13 +536,11 @@ button:active {
 }
 
 .copyright h1 {
-  font-family: bpglecaps;
   font-size: 11px;
   color: #000264;
 }
 
 .footer_author h1 {
-  font-family: bpglecaps;
   font-size: 11px;
   color: #000264;
 }
@@ -580,12 +627,6 @@ button:active {
   margin-left: 50px;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
   .sidenav {
@@ -651,12 +692,17 @@ button:active {
 
 .profile-btn {
   border-radius: 7px;
-  background: rgb(135, 151, 243);
+  background: rgba(135, 151, 243, 0.9);
   color: #fff;
   font-weight: 500;
-  margin-left: 10px;
-  height: 30px;
+  margin-left: 20px;
+  height: 35px;
   width: 70px;
+  font-family: pantonbold;
+}
+
+.profile-btn:hover {
+  background: rgb(131, 147, 236);
 }
 
 .header-info {
@@ -759,4 +805,8 @@ button:active {
   font-family: mont-semibold;
   font-weight: 800;
   margin-bottom: 35px;
+}
+
+.loading {
+  font-size: 24px;
 }

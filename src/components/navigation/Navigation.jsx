@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux'
 import Profile from '../profile/Profile';
 import logo from '../../ui/images/logo.png';
 
+
 const Navigation = () => {
   const user = useSelector((store) => store.user.user);
 
@@ -18,6 +19,9 @@ const Navigation = () => {
           <div className="navi">
             <NavLink to="/" className="nav_link">
               ვაკანსიები
+            </NavLink>
+            <NavLink to="/" className="nav_link">
+              კომპანიები
             </NavLink>
             <NavLink to="/aboutus" className="nav_link">
               ჩვენს შესახებ

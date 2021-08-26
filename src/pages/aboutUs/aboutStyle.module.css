@@ -1,10 +1,17 @@
 .aboutus {
-  font-size: 20px;
+  font-size: 17px;
   font-family: bpg;
   margin-top: 150px;
+  margin-bottom: 100px;
   height: 50vh;
   display: block;
   color: rgb(19, 19, 19);
+  background: #fff;
+  border-radius: 10px;
+  padding: 45px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+  letter-spacing: 1.1px;
+  line-height: 23px;
 }
 
 .container {

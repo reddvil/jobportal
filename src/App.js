@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { autoLoginAction } from './redux/actions';
+import { useDispatch } from 'react-redux';
+import * as routes from './utils/routePaths';
 import HomePage from './pages/HomePage';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
-import SignIn from './pages/auth/sign-in';
-import SignUp from './pages/auth/sign-up';
-import AboutUs from './pages/aboutUs';
 import JobsProvider from './providers/JobsProvider';
-import { useDispatch } from 'react-redux';
-import { autoLoginAction } from './redux/actions';
+import AboutUs from './pages/aboutUs';
+import SignInPage from './pages/auth/sign-in';
+import SignUpPage from './pages/auth/sign-up';
 import './styles/Reset.css';
 import './styles/App.css';
 import './styles/Responsive.css';
@@ -25,25 +26,25 @@ function App() {
     <div className="App">
       <Navigation />
       <Switch>
-        <Route exact path="/">
-          <JobsProvider>
-            {' '}
-            <HomePage />
-          </JobsProvider>
-        </Route>
-
-        <Route path="/aboutus">
+        <Route path={routes.ABOUTUSPAGE_PATH}>
           <AboutUs />
         </Route>
 
-        <Route path="/signin">
-          <SignIn />
+        <Route path={routes.SIGNIN_PATH}>
+          <SignInPage />
         </Route>
 
-        <Route path="/signup">
-          <SignUp />
+        <Route path={routes.SIGNUP_PATH}>
+          <SignUpPage />
+        </Route>
+
+        <Route exact path={routes.HOME_PATH}>
+          <JobsProvider>
+            <HomePage />
+          </JobsProvider>
         </Route>
       </Switch>
+
       <Footer />
     </div>
   );

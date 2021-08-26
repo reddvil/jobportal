@@ -1,22 +1,32 @@
+import { useState } from 'react';
 import { useJobs } from '../../providers/JobsProvider';
 import JobListItem from './JobListItem';
-// import {useState} from 'react'
 
 const JobList = () => {
-  const { jobs , fetchJobs, setJobs} = useJobs();
+  const { jobs, setJobs, loadMore, isLoading, pageSize } = useJobs();
 
-  const handleClick= async () => {
-    const fetchedJobs = await fetchJobs()
+  const [jobsCount, setJobsCount] = useState(2);
+  const [lastJob, setLastJob] = useState(false);
+
+  const handleClick = async () => {
+    const fetchedJobs = await loadMore(jobsCount);
+    setJobsCount((prev) => (prev += 1));
     setJobs((prev) => {
-      return [...prev, ...fetchedJobs]
-    })
-  }
+      return [...prev, ...fetchedJobs];
+    });
+    if (fetchedJobs.length < pageSize) {
+      setLastJob(true);
+    }
+  };
 
   return (
     <div className="jobs_list">
-      {/* <JobListItem /> */}
+      {isLoading && <p className="loading">Loading...</p>}
       {jobs.map(
-        ({ id, title, description, image, company, location, skills  },index) => (
+        (
+          { id, title, description, image, company, location, skills },
+          index,
+        ) => (
           <JobListItem
             title={title}
             key={index}
@@ -29,8 +39,15 @@ const JobList = () => {
         ),
       )}
 
-      <button onClick = {handleClick} className="show_more">მეტის ნახვა</button>
-      {console.log(jobs)}
+      {lastJob ? (
+        ''
+      ) : (
+        <button onClick={handleClick} className="show_more">
+          მეტის ნახვა
+        </button>
+      )}
+      {/* {console.log(jobs)}
+      {console.log(isLoading)} */}
     </div>
   );
 };
