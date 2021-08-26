@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { autoLoginAction } from './redux/actions';
 import { useDispatch } from 'react-redux';
+import * as routes from './utils/routePaths';
 import HomePage from './pages/HomePage';
 import Navigation from './components/navigation';
 import Footer from './components/footer';
@@ -22,30 +23,31 @@ function App() {
   }, [dispatch]);
 
   return (
-    <div className='App'>
+    <div className="App">
       <Navigation />
       <Switch>
-        <Route exact path='/'>
+        <Route path={routes.ABOUTUSPAGE_PATH}>
+          <AboutUs />
+        </Route>
+
+        <Route path={routes.SIGNIN_PATH}>
+          <SignInPage />
+        </Route>
+
+        <Route path={routes.SIGNUP_PATH}>
+          <SignUpPage />
+        </Route>
+
+        <Route exact path={routes.HOME_PATH}>
           <JobsProvider>
             <HomePage />
           </JobsProvider>
         </Route>
-
-        <Route path='/aboutus'>
-          <AboutUs />
-        </Route>
-
-        <Route path='/signin'>
-          <SignInPage />
-        </Route>
-
-        <Route path='/signup'>
-          <SignUpPage />
-        </Route>
       </Switch>
+
       <Footer />
     </div>
   );
-};
+}
 
 export default App;

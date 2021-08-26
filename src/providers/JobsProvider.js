@@ -28,7 +28,14 @@ const JobsProvider = ({ children }) => {
 
   return (
     <JobsContext.Provider
-      value={{ jobs, setJobs, fetchJobs, loadMore, isLoading, pageSize }}>
+      value={{
+        jobs,
+        setJobs,
+        fetchJobs,
+        loadMore,
+        isLoading,
+        pageSize,
+      }}>
       {children}
     </JobsContext.Provider>
   );
