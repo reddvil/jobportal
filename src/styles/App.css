@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(211, 211, 211);
+}
+
+body::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
 body {
   box-sizing: border-box;
   background: rgb(246, 248, 249);
@@ -13,6 +26,7 @@ body {
   transition: 0.3s;
   overflow-x: hidden;
   transition: 0.3s ease-in;
+  font-size: 62.5%;
 }
 
 button {
@@ -70,9 +84,14 @@ button:active {
   color: #000;
   background: transparent;
   border: 0.5px solid #e8edef;
-  padding: 14px 40px;
+  padding: 14px 25px;
   cursor: pointer;
   border-radius: 7px;
+  font-size: 14px;
+}
+
+.auth_btn:hover {
+  background: rgb(247, 247, 247);
 }
 
 .reg_btn {
@@ -84,6 +103,7 @@ button:active {
   cursor: pointer;
   border-radius: 7px;
   margin-left: 7px;
+  font-size: 14px;
 }
 
 .navi {
@@ -94,8 +114,7 @@ button:active {
 
 .navi a {
   font-size: 13px;
-  font-family: pantonreg;
-  letter-spacing: 1px;
+  font-family: FiraGO-Regular;
   color: rgb(63, 63, 63);
   text-indent: 35px;
   transition: 0.1s ease-in;
@@ -104,7 +123,6 @@ button:active {
 
 .navi a:hover {
   color: rgb(135, 145, 202);
-  font-weight: 600;
 }
 
 .progress-container {
@@ -172,6 +190,7 @@ button:active {
   /*   flex-wrap:wrap;*/
   justify-content: space-between;
   padding-top: 15px;
+  flex-shrink: 0;
 }
 
 .category {
@@ -193,7 +212,7 @@ button:active {
 
 .title_gap .title {
   font-family: 'mont-bold';
-  font-size: 16px;
+  font-size: 15px;
   letter-spacing: 0.5px;
   padding-bottom: 4px;
   color: rgb(15, 2, 80);
@@ -201,7 +220,7 @@ button:active {
 
 .title_gap .jobs_count {
   font-family: 'mont-semibold';
-  font-size: 14px;
+  font-size: 13px;
   color: rgb(188, 188, 200);
 }
 
@@ -307,33 +326,35 @@ button:active {
   align-items: center;
 }
 .company-logo {
-  height: 38px;
-  width: 38px;
+  height: 45px;
+  width: 45px;
   margin-right: 10px;
   border-radius: 10px;
-  border: 2px solid rgba(95, 95, 95, 0.1);
+  border: 2px solid rgba(95, 95, 95, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .company-logo img {
   height: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   object-position: center;
-  /* width: 100%; */
-  object-fit: contain;
+  width: 100%;
+  object-fit: cover;
 }
 
 .vacansy-title h1 {
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'mont-bold';
-  padding-bottom: 3px;
+  margin-bottom: 4px;
+  line-height: 15px;
   color: rgb(15, 2, 80);
 }
 
 .vacansy-title h2 {
-  font-size: 14px;
+  font-size: 13px;
   font-family: 'mont-semibold';
   color: rgb(15, 2, 80, 0.6);
 }
@@ -503,6 +524,7 @@ button:active {
   width: 100%;
   height: 70px;
   margin-top: 25px;
+  font-family: bpg;
 }
 
 .inner-footer {
@@ -514,13 +536,11 @@ button:active {
 }
 
 .copyright h1 {
-  font-family: bpglecaps;
   font-size: 11px;
   color: #000264;
 }
 
 .footer_author h1 {
-  font-family: bpglecaps;
   font-size: 11px;
   color: #000264;
 }
@@ -605,12 +625,6 @@ button:active {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */

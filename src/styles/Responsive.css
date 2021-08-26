@@ -50,7 +50,7 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   .categories {
     flex-wrap: wrap;
   }
