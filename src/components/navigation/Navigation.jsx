@@ -1,8 +1,7 @@
 import { NavLink } from 'react-router-dom';
-import {useSelector} from 'react-redux'
+import { useSelector } from 'react-redux';
 import Profile from '../profile/Profile';
 import logo from '../../ui/images/logo.png';
-
 
 const Navigation = () => {
   const user = useSelector((store) => store.user.user);
@@ -17,16 +16,29 @@ const Navigation = () => {
             </NavLink>
           </div>
           <div className="navi">
-            <NavLink to="/" className="nav_link">
+            <NavLink
+              exact
+              to="/"
+              className="nav_link"
+              activeClassName="activeNavLink">
               ვაკანსიები
             </NavLink>
-            <NavLink to="/" className="nav_link">
+            <NavLink
+              to="/company"
+              className="nav_link"
+              activeClassName="activeNavLink">
               კომპანიები
             </NavLink>
-            <NavLink to="/aboutus" className="nav_link">
+            <NavLink
+              to="/aboutus"
+              className="nav_link"
+              activeClassName="activeNavLink">
               ჩვენს შესახებ
             </NavLink>
-            <NavLink to="/" className="nav_link">
+            <NavLink
+              to="/contact"
+              className="nav_link"
+              activeClassName="activeNavLink">
               კონტაქტი
             </NavLink>
           </div>

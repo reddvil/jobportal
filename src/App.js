@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { autoLoginAction } from './redux/actions';
 import { useDispatch } from 'react-redux';
 import * as routes from './utils/routePaths';
@@ -14,6 +14,7 @@ import './styles/Reset.css';
 import './styles/App.css';
 import './styles/Responsive.css';
 import './styles/Fonts.css';
+import Page404 from './pages/Page404';
 
 function App() {
   const dispatch = useDispatch();
@@ -43,6 +44,12 @@ function App() {
             <HomePage />
           </JobsProvider>
         </Route>
+
+        <Route path={routes.NOTFOUNDPAGE_PATH}>
+          <Page404 />
+        </Route>
+
+        <Redirect to="/page404" />
       </Switch>
 
       <Footer />

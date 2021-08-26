@@ -810,3 +810,7 @@ button:active {
 .loading {
   font-size: 24px;
 }
+
+.activeNavLink {
+  color: #4e6fd3 !important;
+}
