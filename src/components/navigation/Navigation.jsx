@@ -56,10 +56,6 @@ const Navigation = () => {
               </NavLink>
             </div>
           )}
-
-          <div className="responsive-menu">
-            <i className="far fa-bars"></i>
-          </div>
         </div>
       </div>
     </header>

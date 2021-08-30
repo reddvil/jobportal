@@ -3,7 +3,7 @@
   font-family: bpg;
   margin-top: 150px;
   margin-bottom: 100px;
-  height: 50vh;
+  min-height: 50vh;
   display: block;
   color: rgb(19, 19, 19);
   background: #fff;

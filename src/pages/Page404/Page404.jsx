@@ -8,7 +8,7 @@ function Page404() {
         marginBottom: 150,
         textAlign: 'center',
         fontSize: 36,
-        fontFamily: 'FiraGo-Medium',
+        fontFamily:'FiraGo-Medium'
       }}>
       Page Not Found
     </div>

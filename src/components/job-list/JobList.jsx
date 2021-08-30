@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useJobs } from '../../providers/JobsProvider';
+import SkeletonLoader from '../SkeletonLoader';
 import JobListItem from './JobListItem';
 
 const JobList = () => {
@@ -20,25 +21,26 @@ const JobList = () => {
   };
 
   return (
-    <div className="jobs_list">
-      {isLoading && <p className="loading">Loading...</p>}
-      {jobs.map(
-        (
-          { id, title, description, image, company, location, skills },
-          index,
-        ) => (
-          <JobListItem
-            title={title}
-            key={index}
-            description={description}
-            image={image}
-            company={company}
-            location={location}
-            skills={skills}
-          />
-        ),
-      )}
-
+    <>
+      <div className="jobs_list">
+        {isLoading && <SkeletonLoader />}
+        {jobs.map(
+          (
+            { id, title, description, image, company, location, skills },
+            index,
+          ) => (
+            <JobListItem
+              title={title}
+              key={index}
+              description={description}
+              image={image}
+              company={company}
+              location={location}
+              skills={skills}
+            />
+          ),
+        )}
+      </div>
       {lastJob ? (
         ''
       ) : (
@@ -46,9 +48,7 @@ const JobList = () => {
           მეტის ნახვა
         </button>
       )}
-      {/* {console.log(jobs)}
-      {console.log(isLoading)} */}
-    </div>
+    </>
   );
 };
 

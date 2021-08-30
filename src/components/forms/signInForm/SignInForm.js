@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
 import { withNoAuth } from '../../../hoc';
-import { useSelector } from 'react-redux';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { setUser } from '../../../redux/actions/auth-actions';
 import { login } from '../../../services/auth';
 import styles from './signInStyle.module.css';
@@ -17,6 +16,7 @@ function SignInForm(props) {
 
   const onSubmit = async (data) => {
     const loggedIn = await login(data);
+    console.log(loggedIn);
     localStorage.setItem('auth.token', JSON.stringify(loggedIn.token));
     dispatch(setUser(loggedIn.token));
   };
@@ -37,7 +37,6 @@ function SignInForm(props) {
           type="email"
           className="htmlForm-control"
           id="email"
-          defaultValue="eve.holt@reqres.in"
           placeholder="Enter your email"
           {...register('email', { required: true, email: true })}
         />
@@ -50,7 +49,6 @@ function SignInForm(props) {
           className="htmlForm-control"
           id="password"
           placeholder="Enter your password"
-          defaultValue="cityslicka"
           {...register('password', { required: true })}
         />
 
