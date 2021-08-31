@@ -2,21 +2,9 @@
   .jobs_list {
     grid-template-columns: repeat(3, 1fr);
   }
-
-  .container {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
 }
 
 @media only screen and (max-width: 768px) {
-  .categories {
-    flex-wrap: wrap;
-  }
-
-  .category {
-    margin-bottom: 7px;
-  }
   .navi {
     display: none;
   }
@@ -47,28 +35,8 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .categories {
-    width: 100% !important;
-    flex-direction: column;
-    margin-top: -90px;
-  }
-
-  .category {
-    margin-bottom: 10px;
-    width: 100%;
-    height: 140px;
-  }
-
   .navi {
     display: none;
-  }
-
-  .categories {
-    display: none;
-  }
-
-  .showcat {
-    display: block;
   }
 
   .job-item02 {
